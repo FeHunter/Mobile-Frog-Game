@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b6a3d809fd651c4c8926cbeaa453909
+guid: 8da07143312de23499c1ff66493f3e0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Assets_0
+      name: Water_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,83 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce5ac888416b9f49b5f488e987efccb
-      internalID: 597149068
+      spriteID: cf6fc6a21a0d9c14ab4c70c9336e5dfc
+      internalID: -652292956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets_1
-      rect:
-        serializedVersion: 2
-        x: 1648
-        y: 1140
-        width: 396
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 833ccdf62eea01a458a3b18cf3c64176
-      internalID: -1723074892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_2
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 941
-        width: 129
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6224bf1a67365bb4aa268f65fcd0288c
-      internalID: -1187868123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_3
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 947
-        width: 133
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e66c829aceea42a47a9f4c11021e32d1
-      internalID: 1842430001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_4
+      name: Water_1
       rect:
         serializedVersion: 2
         x: 419
-        y: 1135
+        y: 1140
         width: 409
-        height: 401
+        height: 396
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,50 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8999dcbc3b9e61468eea778325793ea
-      internalID: -1219799682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_5
-      rect:
-        serializedVersion: 2
-        x: 845
-        y: 1140
-        width: 397
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfa8fb3c166e71f44b6bc6229b56b5ca
-      internalID: 1544808928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_6
-      rect:
-        serializedVersion: 2
-        x: 1248
-        y: 1140
-        width: 396
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 804005d3dca6d71479d3f849cca2543c
-      internalID: 1335298098
+      spriteID: 753c6bfd7963b5847af5d899dab51850
+      internalID: 1365915586
       vertices: []
       indices: 
       edges: []
@@ -274,14 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Assets_2: -1187868123
-      Assets_0: 597149068
-      Assets_6: 1335298098
-      Assets_7: 751754245
-      Assets_3: 1842430001
-      Assets_4: -1219799682
-      Assets_5: 1544808928
-      Assets_1: -1723074892
+      Water_1: 1365915586
+      Water_0: -652292956
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
