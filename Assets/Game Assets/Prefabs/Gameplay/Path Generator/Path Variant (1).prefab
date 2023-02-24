@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 429978662640687392}
   - component: {fileID: 429978662640687398}
   - component: {fileID: 429978662640687399}
-  - component: {fileID: 1115189549535084576}
+  - component: {fileID: 1841931142036869289}
   m_Layer: 6
   m_Name: Path Variant (1)
   m_TagString: Plant
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.9804934
---- !u!114 &1115189549535084576
+--- !u!114 &1841931142036869289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3132190935d313147bebbc50e1f64422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copys: []
+  id: 0

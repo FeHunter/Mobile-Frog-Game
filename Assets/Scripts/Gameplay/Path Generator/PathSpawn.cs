@@ -51,9 +51,14 @@ public class PathSpawn : MonoBehaviour
         }
         else 
         {
+            int spawn = 0;
             for (int i=0; i < _pathGenerator.Size; i ++)
             {
-                Instantiate (Plant.gameObject, _path[Random.Range(0, _path.Length)].position, Quaternion.identity, _pathGenerator.transform);
+                spawn = Random.Range(0, 2);
+                if (spawn == 1)
+                {
+                    Instantiate (Plant.gameObject, _path[Random.Range(0, _path.Length)].position, Quaternion.identity, _pathGenerator.transform);
+                }
             }
         }
     }

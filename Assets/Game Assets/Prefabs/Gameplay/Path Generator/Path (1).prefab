@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <VariantPath>k__BackingField: 1
-  <Plant>k__BackingField: {fileID: 5516051184328772751}
+  <Plant>k__BackingField: {fileID: 429978662640687393, guid: 24749e248e31e524babd554a8bafff4e, type: 3}
 --- !u!1 &5228068030187725118
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <VariantPath>k__BackingField: 1
-  <Plant>k__BackingField: {fileID: 5516051184328772751}
+  <Plant>k__BackingField: {fileID: 429978662640687393, guid: 24749e248e31e524babd554a8bafff4e, type: 3}
 --- !u!1 &5516051183985227474
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 5516051184328772744}
   - component: {fileID: 5516051184328772745}
   - component: {fileID: 1011437231813314867}
-  - component: {fileID: 4729612719676892252}
+  - component: {fileID: 4667618017675427272}
   m_Layer: 6
   m_Name: Path (1)
   m_TagString: Plant
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SmallGroup>k__BackingField: {fileID: 5309913666002610496}
   <BigGroup>k__BackingField: {fileID: 6402229023264653120}
---- !u!114 &4729612719676892252
+--- !u!114 &4667618017675427272
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -899,7 +899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  copys: []
 --- !u!1 &5516051184765561203
 GameObject:
   m_ObjectHideFlags: 0
