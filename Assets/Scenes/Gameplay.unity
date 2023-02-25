@@ -5167,6 +5167,8 @@ MonoBehaviour:
   RandomSize: 0
   <Size>k__BackingField: 20
   <CurrentSize>k__BackingField: 0
+  <SaveRange>k__BackingField: 5
+  LastSpawn: {fileID: 0}
 --- !u!1001 &1081111534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5375,7 +5377,7 @@ GameObject:
   - component: {fileID: 1448520984}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

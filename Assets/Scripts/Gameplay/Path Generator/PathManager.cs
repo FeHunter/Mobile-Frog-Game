@@ -5,12 +5,15 @@ using UnityEngine;
 public class PathManager : MonoBehaviour
 {
 
+    private PathGenerator _pathGenerator;
     private int _variantPath;
     [field: SerializeField] public GameObject SmallGroup {get; set;}
     [field: SerializeField] public GameObject BigGroup {get; set;}
 
     void Start()
     {
+        _pathGenerator = this.transform.parent.GetComponent<PathGenerator>();
+
         _variantPath = Random.Range(0, 3);
         if (_variantPath == 1)
         {
@@ -24,6 +27,10 @@ public class PathManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (_pathGenerator.LastSpawn == this.transform.parent)
+        {
+            Debug.Log ("Is the last" + this.transform.parent.name);
+            // InstatiatePath ();
+        }    
     }
 }

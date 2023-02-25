@@ -606,6 +606,8 @@ MonoBehaviour:
   RandomSize: 1
   <Size>k__BackingField: 0
   <CurrentSize>k__BackingField: 0
+  <SaveRange>k__BackingField: 0
+  LastSpawn: {fileID: 0}
 --- !u!1 &5410062752527556190
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3132190935d313147bebbc50e1f64422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  <MainPath>k__BackingField: 1
 --- !u!1 &5516051184765561203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1504,8 @@ MonoBehaviour:
   RandomSize: 1
   <Size>k__BackingField: 0
   <CurrentSize>k__BackingField: 0
+  <SaveRange>k__BackingField: 0
+  LastSpawn: {fileID: 0}
 --- !u!1 &6642782121923678999
 GameObject:
   m_ObjectHideFlags: 0

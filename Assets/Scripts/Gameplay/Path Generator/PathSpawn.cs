@@ -39,7 +39,7 @@ public class PathSpawn : MonoBehaviour
         }
     }
 
-    void InstatiatePath ()
+    public void InstatiatePath ()
     {
         if (!VariantPath)
         {
