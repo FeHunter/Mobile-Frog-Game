@@ -13,7 +13,7 @@ public class CheckPosition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Plant")
+        if (other.tag == "Plant" && other.GetComponent<Plant>().CurrentStage != 2)
         {
             player.GoTo = other.transform;
         }    
