@@ -8,7 +8,7 @@ public class CheckPosition : MonoBehaviour
 
     private void Update()
     {
-        transform.position = player.point;    
+        transform.position = player.Point;    
     }
 
     private void OnTriggerEnter2D(Collider2D other)

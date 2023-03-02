@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Plant
   - Path
+  - Path-SmallGroup
+  - FxTemporaire
+  - Coin
   layers:
   - Default
   - TransparentFX
