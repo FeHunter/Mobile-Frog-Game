@@ -31,6 +31,8 @@ public class PathGenerator : MonoBehaviour
 
             if (CurrentSize >= Size && Vector2.Distance(LastSpawn.transform.position, _player.position) <= 2)
             {
+                Time.timeScale = 0;
+
                 // Put paths on the list
                 for (int i=0; i < (transform.childCount); i ++)
                 {
@@ -53,6 +55,10 @@ public class PathGenerator : MonoBehaviour
                         LastSpawn.transform.GetChild(0).GetComponent<PathSpawn>().InstatiatePath ();
                     }
                 }
+            }
+            else
+            {
+                Time.timeScale = 1;
             }
         }
     }

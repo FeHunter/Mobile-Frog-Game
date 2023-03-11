@@ -8,9 +8,10 @@ public class CheckPosition : MonoBehaviour
 
     private void Update()
     {
-        transform.position = player.Point;    
+        transform.position = player.Point; 
     }
 
+/*
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Plant" && other.GetComponent<Plant>().CurrentStage != 2)
@@ -25,4 +26,5 @@ public class CheckPosition : MonoBehaviour
             player.GoTo = null;
         }    
     }
+    */
 }

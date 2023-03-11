@@ -4,25 +4,36 @@ using UnityEngine.SceneManagement;
 public class PlayerFrog : MonoBehaviour
 {
     [field: SerializeField] private float _range {get; set;} // 4.5f
-    private float _waitToMove;
+    private float _noRepeat, _waitToMove;
+    private SpriteRenderer _sprite;
     public Transform? GoTo {get; set;}
     public Vector2 Point {get; set;}
     [field: SerializeField] public bool live {get; set;}
     [field: SerializeField] public float MoveTime { get; set; }
     [field: SerializeField] public LineRenderer sign {get; set;}
-    [field: SerializeField] public ParticleSystem VfxPointToGo {get; set;}
+    public ParticleSystem VfxPointToGo, VfxGameOver;
     void Start()
     {
-
+        _sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        Sign ();
-
         if (!live)
         {
-            Invoke ("ReloadScene", 2);
+            // Game Over
+            if (_noRepeat == 0)
+            {
+                _sprite.enabled = false;
+                VfxGameOver.Play ();
+                Invoke ("ReloadScene", 5);
+                _noRepeat = 1;   
+            }
+        }
+        else 
+        {
+            // In Game
+            Sign ();
         }
     }
 
@@ -31,24 +42,40 @@ public class PlayerFrog : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    void MovementControl ()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Point = new Vector2 (Mathf.Clamp (Point.x, transform.position.x-_range, transform.position.x+_range), Mathf.Clamp (Point.y, transform.position.y-_range, transform.position.y+_range));
+        }
+        // Go to position
+        else if (_waitToMove >= .5f)
+        {
+            MoveTo ();
+        }
+    }
+
     void Sign ()
     {
-        Point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Point = new Vector2 (Mathf.Clamp (Point.x, transform.position.x-_range, transform.position.x+_range), Mathf.Clamp (Point.y, transform.position.y-_range, transform.position.y+_range));
+        MovementControl ();
 
-        if (GoTo != null && Distance(GoTo) > 2f)
+        
+        if (GoTo != null && Distance(transform.position, GoTo.position) > 2f)
         {
-            VfxPointToGo.Play ();
+            //VfxPointToGo.Play ();
             VfxPointToGo.transform.position = new Vector3 (Point.x, Point.y, 0);
         }
         else
         {
-            VfxPointToGo.Stop ();
+            //VfxPointToGo.Stop ();
         }
 
+        
         _waitToMove += 1*Time.deltaTime;
 
-        if (_waitToMove >= MoveTime)
+        /*
+        if (Input.GetMouseButton(0))
         {
             sign.enabled = true;
             sign.SetPosition(0, transform.position);
@@ -60,17 +87,17 @@ public class PlayerFrog : MonoBehaviour
             sign.enabled = false;
             VfxPointToGo.Stop ();
         }
-
-        // Go to position
-        if (Input.GetMouseButtonDown(0) && _waitToMove >= MoveTime)
-        {
-            transform.position = (GoTo != null && Distance(GoTo) > 2f) ? new Vector3(GoTo.position.x, GoTo.position.y, 0) : transform.position;
-            _waitToMove = 0;
-        }
+        */
     }
 
-    float Distance (Transform obj)
+    void MoveTo ()
     {
-        return Vector2.Distance (transform.position, obj.position);
+        transform.position = (GoTo != null && Distance(transform.position, GoTo.position) > 2f) ? new Vector3(GoTo.position.x, GoTo.position.y, 0) : transform.position;
+        _waitToMove = 0;
+    }
+
+    public float Distance (Vector2 obj1, Vector2 obj2)
+    {
+        return Vector2.Distance (obj1, obj2);
     }
 }
