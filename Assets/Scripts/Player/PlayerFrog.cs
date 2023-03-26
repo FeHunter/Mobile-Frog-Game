@@ -11,6 +11,7 @@ public class PlayerFrog : MonoBehaviour
     [field: SerializeField] public bool live {get; set;}
     [field: SerializeField] public float MoveTime { get; set; }
     [field: SerializeField] public LineRenderer sign {get; set;}
+    [field: SerializeField] public PathGenerator pathGenerator {get; set;}
     public ParticleSystem VfxPointToGo, VfxGameOver;
     void Start()
     {
@@ -32,8 +33,11 @@ public class PlayerFrog : MonoBehaviour
         }
         else 
         {
-            // In Game
-            Sign ();
+            if (!pathGenerator.EndGame)
+            {
+                // In Game
+                Sign ();
+            }
         }
     }
 

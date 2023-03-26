@@ -9859,6 +9859,8 @@ GameObject:
   - component: {fileID: 4875788574125224452}
   - component: {fileID: 8071320141825246519}
   - component: {fileID: 4875788574125224454}
+  - component: {fileID: 8151309511327230076}
+  - component: {fileID: -6807861552702267768}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Untagged
@@ -9970,6 +9972,40 @@ CircleCollider2D:
   m_Offset: {x: -0.40402788, y: -0.25710863}
   serializedVersion: 2
   m_Radius: 0.5901665
+--- !u!50 &8151309511327230076
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875788574125224451}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-6807861552702267768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875788574125224451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c1181d9853c0d418a31ec7a6ffc243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: {fileID: 0}
 --- !u!1 &6142214890569825033
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class Plant : MonoBehaviour
     [field: SerializeField] public int AddScore {get; set;}
     [field: SerializeField] public int CurrentStage {get; set;}
     [field: SerializeField] public Sprite[] PlantStages {get; set;}
+    [field: SerializeField] public PathGenerator PathGenerator;
     public ParticleSystem VfxGetIn, VfxSunken, VfxBubbles;
     public AudioSource[] SFSplash;
 
@@ -19,6 +20,7 @@ public class Plant : MonoBehaviour
     {
         _score = GameObject.FindGameObjectWithTag("GameController").transform.GetChild(1).GetComponent<Score>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        PathGenerator = GameObject.FindGameObjectWithTag("Path").GetComponent<PathGenerator>();
         _playerScript = _player.GetComponent<PlayerFrog>();
         _renderer = GetComponent<SpriteRenderer>();
         CurrentStage = Random.Range(0, 2);
@@ -34,10 +36,13 @@ public class Plant : MonoBehaviour
             SunkenTime (10);
 
             // Game over
-            if (CurrentStage >= 2)
+            if (!PathGenerator.EndGame)
             {
-                _player.GetComponent<PlayerFrog>().live = false;
-                VfxBubbles.Play ();
+                if (CurrentStage >= 2)
+                {
+                    _player.GetComponent<PlayerFrog>().live = false;
+                    VfxBubbles.Play ();
+                }
             }
         }
 

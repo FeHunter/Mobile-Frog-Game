@@ -14,7 +14,7 @@ public class SpawnFly : MonoBehaviour{
 
     void Update()
     {
-        if (Vector2.Distance(Frog.transform.position, Path.LastSpawn.transform.position) < 10)
+        if (Path.CurrentSize == Path.Size)
         {
             if (_spawn == 0)
             {
