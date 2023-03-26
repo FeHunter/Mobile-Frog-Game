@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 350898727, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
   - {fileID: 1999746871, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
   - {fileID: 838498625, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
+  PathGenerator: {fileID: 0}
   VfxGetIn: {fileID: 8595334072402922605}
   VfxSunken: {fileID: 7662306957959648018}
   VfxBubbles: {fileID: 5945905815814983073}

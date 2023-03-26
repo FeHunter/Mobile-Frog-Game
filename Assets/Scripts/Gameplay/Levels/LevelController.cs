@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
 
     [field: SerializeField] public int CurrentLevel {get; set;}
     public PathGenerator Path;
+    public PlayerFrog player;
     public GameObject WinPanel;
 
     void Start()
@@ -28,7 +29,8 @@ public class LevelController : MonoBehaviour
         if (Path.EndGame)
         {
             WinPanel.SetActive (true);
-            Invoke ("ReloadLevel", 3);
+            player.Playing = false;
+            // Invoke ("ReloadLevel", 3);
         }
     }
 

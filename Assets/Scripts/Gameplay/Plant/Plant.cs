@@ -31,18 +31,15 @@ public class Plant : MonoBehaviour
         CurrentStage = Mathf.Clamp(CurrentStage, 0, 2);
         _renderer.sprite = PlantStages[CurrentStage];
 
-        if (Vector2.Distance(transform.position, _player.position) <= 1)
+        if (Vector2.Distance(transform.position, _player.position) <= 1 && !PathGenerator.EndGame && _playerScript.Playing)
         {
             SunkenTime (10);
 
             // Game over
-            if (!PathGenerator.EndGame)
+            if (CurrentStage >= 2)
             {
-                if (CurrentStage >= 2)
-                {
-                    _player.GetComponent<PlayerFrog>().live = false;
-                    VfxBubbles.Play ();
-                }
+                _player.GetComponent<PlayerFrog>().live = false;
+                VfxBubbles.Play ();
             }
         }
 

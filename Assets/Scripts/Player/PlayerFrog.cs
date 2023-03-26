@@ -8,6 +8,7 @@ public class PlayerFrog : MonoBehaviour
     private SpriteRenderer _sprite;
     public Transform? GoTo {get; set;}
     public Vector2 Point {get; set;}
+    [field: SerializeField] public bool Playing {get; set;}
     [field: SerializeField] public bool live {get; set;}
     [field: SerializeField] public float MoveTime { get; set; }
     [field: SerializeField] public LineRenderer sign {get; set;}
@@ -33,7 +34,7 @@ public class PlayerFrog : MonoBehaviour
         }
         else 
         {
-            if (!pathGenerator.EndGame)
+            if (!pathGenerator.EndGame && Playing)
             {
                 // In Game
                 Sign ();

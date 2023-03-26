@@ -19667,6 +19667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offPath: []
+  EndGame: 0
   RandomSize: 1
   <Size>k__BackingField: 0
   <CurrentSize>k__BackingField: 0
@@ -20016,6 +20017,7 @@ MonoBehaviour:
   - {fileID: 350898727, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
   - {fileID: 1999746871, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
   - {fileID: 838498625, guid: a97ab29dec40a3a4ab894e0648a9fd29, type: 3}
+  PathGenerator: {fileID: 0}
   VfxGetIn: {fileID: 6777290690646982331}
   VfxSunken: {fileID: 4004792148489206894}
   VfxBubbles: {fileID: 4672982614082635529}
@@ -25517,6 +25519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offPath: []
+  EndGame: 0
   RandomSize: 1
   <Size>k__BackingField: 0
   <CurrentSize>k__BackingField: 0
