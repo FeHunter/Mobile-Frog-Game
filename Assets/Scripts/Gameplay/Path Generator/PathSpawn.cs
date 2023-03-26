@@ -43,10 +43,13 @@ public class PathSpawn : MonoBehaviour
     {
         if (!VariantPath)
         {
+            int _spawnP = Random.Range(0, _path.Length);
             if (_pathGenerator.CurrentSize < _pathGenerator.Size)
             {
-                Instantiate (Plant.gameObject, _path[Random.Range(0, _path.Length)].position, Quaternion.identity, _pathGenerator.transform);
+                Instantiate (Plant.gameObject, _path[_spawnP].position, Quaternion.identity, _pathGenerator.transform);
                 _pathGenerator.CurrentSize ++;
+                Destroy (transform.GetChild(_spawnP).gameObject);
+                GetSpawnPoints ();
             }
         }
         else 
@@ -54,6 +57,7 @@ public class PathSpawn : MonoBehaviour
             int spawn = 0;
             for (int i=0; i < _pathGenerator.Size; i ++)
             {
+                int _spawnP = Random.Range(0, _path.Length);
                 spawn = Random.Range(0, 2);
                 if (spawn == 1)
                 {

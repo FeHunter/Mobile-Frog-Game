@@ -19630,6 +19630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100839864328849579}
   - component: {fileID: 6671728911188868106}
+  - component: {fileID: 1674620931872281351}
   m_Layer: 2
   m_Name: Small-Group
   m_TagString: Untagged
@@ -19671,6 +19672,19 @@ MonoBehaviour:
   <CurrentSize>k__BackingField: 0
   <SaveRange>k__BackingField: 0
   LastSpawn: {fileID: 0}
+--- !u!114 &1674620931872281351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309913666002610496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3132190935d313147bebbc50e1f64422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MainPath>k__BackingField: 0
 --- !u!1 &5410062752527556190
 GameObject:
   m_ObjectHideFlags: 0
@@ -25466,6 +25480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3421924145415675656}
   - component: {fileID: 6761466389553656222}
+  - component: {fileID: 3506613539648559218}
   m_Layer: 2
   m_Name: Big-Group
   m_TagString: Untagged
@@ -25507,6 +25522,19 @@ MonoBehaviour:
   <CurrentSize>k__BackingField: 0
   <SaveRange>k__BackingField: 0
   LastSpawn: {fileID: 0}
+--- !u!114 &3506613539648559218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402229023264653120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3132190935d313147bebbc50e1f64422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MainPath>k__BackingField: 0
 --- !u!1 &6492881034732464394
 GameObject:
   m_ObjectHideFlags: 0

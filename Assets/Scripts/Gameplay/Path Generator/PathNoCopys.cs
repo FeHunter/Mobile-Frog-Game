@@ -16,17 +16,17 @@ public class PathNoCopys : MonoBehaviour
             if (!MainPath)
             {
                 // If this object has no PathManager = Generic Plant
-                if (GetComponent<PathManager>() == null && other.GetComponent<PathManager>() == null)
+                if (GetComponent<PathNoCopys>() == null && other.GetComponent<PathNoCopys>() == null)
                 {
                     GenericBehavior(other.gameObject);
                 }
                 // If other object has a Path... and This one not, off this
-                else if (other.GetComponent<PathManager>() != null && GetComponent<PathManager>() == null)
+                else if (other.GetComponent<PathNoCopys>() != null && GetComponent<PathNoCopys>() == null)
                 {
                     gameObject.SetActive (false);
                 }
                 // If this and the other has a PathManager, so randomly choose one
-                else if (other.GetComponent<PathManager>() != null && GetComponent<PathManager>() != null)
+                else if (other.GetComponent<PathNoCopys>() != null && GetComponent<PathNoCopys>() != null)
                 {
                     RandomChooseOne (other.gameObject);
                 }

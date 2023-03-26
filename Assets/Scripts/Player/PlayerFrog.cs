@@ -44,7 +44,7 @@ public class PlayerFrog : MonoBehaviour
 
     void MovementControl ()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) )
         {
             Point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Point = new Vector2 (Mathf.Clamp (Point.x, transform.position.x-_range, transform.position.x+_range), Mathf.Clamp (Point.y, transform.position.y-_range, transform.position.y+_range));
@@ -63,18 +63,18 @@ public class PlayerFrog : MonoBehaviour
         
         if (GoTo != null && Distance(transform.position, GoTo.position) > 2f)
         {
-            //VfxPointToGo.Play ();
+            VfxPointToGo.Play ();
             VfxPointToGo.transform.position = new Vector3 (Point.x, Point.y, 0);
         }
         else
         {
-            //VfxPointToGo.Stop ();
+            VfxPointToGo.Stop ();
         }
 
         
         _waitToMove += 1*Time.deltaTime;
 
-        /*
+        
         if (Input.GetMouseButton(0))
         {
             sign.enabled = true;
@@ -87,13 +87,17 @@ public class PlayerFrog : MonoBehaviour
             sign.enabled = false;
             VfxPointToGo.Stop ();
         }
-        */
+        
     }
 
     void MoveTo ()
     {
-        transform.position = (GoTo != null && Distance(transform.position, GoTo.position) > 2f) ? new Vector3(GoTo.position.x, GoTo.position.y, 0) : transform.position;
-        _waitToMove = 0;
+        if (Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), Point) <= 2.5f){
+            transform.position = (GoTo != null && Distance(transform.position, GoTo.position) > 2f) ? new Vector3(GoTo.position.x, GoTo.position.y, 0) : transform.position;
+            _waitToMove = 0;
+        }else{
+            _waitToMove = 0;
+        }
     }
 
     public float Distance (Vector2 obj1, Vector2 obj2)
